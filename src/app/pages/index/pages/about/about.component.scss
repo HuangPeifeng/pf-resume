@@ -1,0 +1,55 @@
+.about-layout {
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .about-block {
+    display: flex;
+    justify-content: space-around;
+    width: 1024px;
+
+    .about-cover {
+      position: relative;
+      width: 306px;
+      height: 306px;
+
+      .cover {
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        height: 300px;
+        background-image: url(/assets/images/head.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 3px solid #fff;
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+        transition: .3s ease-in-out;
+
+        &:hover {
+          margin-bottom: 10px;
+          box-shadow: 0px 10px 8px 5px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .about-name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .tw {
+        font-size: 4em;
+        font-weight: bold;
+        border-bottom: 1px solid #f26b38;
+        margin-bottom: 5px;
+      }
+
+      .en {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
