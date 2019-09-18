@@ -6,6 +6,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 0 25px;
+  background-color: #fff;
 
   span {
     cursor: pointer;
@@ -14,6 +15,12 @@
 
     &:hover {
       color: #f26b38;
+      border-bottom: 1px solid #f26b38;
+    }
+
+    &.active {
+      color: #f26b38;
+      border-bottom: 1px solid #f26b38;
     }
   }
 }

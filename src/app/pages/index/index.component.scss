@@ -9,5 +9,10 @@
     width: calc(100vw - 50px);
     height: calc(100vh - 50px);
     background-color: #fff;
+    overflow-y: auto;
+
+    .main-content {
+      padding: 100px 20px 0 20px;
+    }
   }
 }
