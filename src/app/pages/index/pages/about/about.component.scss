@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   .about-block {
     display: flex;
@@ -51,5 +52,14 @@
         font-size: 1.5em;
       }
     }
+  }
+
+  .about-content {
+    width: 824px;
+    padding: 50px;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 75px;
+    border: 1px solid #f26b38;
   }
 }
