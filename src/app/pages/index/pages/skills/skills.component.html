@@ -1,13 +1,16 @@
 <div class="skills-layout">
   <div class="skills-block">
-    <section class="skills-contents" *ngFor="let item of skills">
-      <div class="title-block">
-        <div class="title">{{ item.name }}</div>
-        <span>{{ item.percent }}%</span>
-      </div>
-      <div class="percent-block">
-        <div class="percent" [ngStyle]="{ 'width': item.percent + '%' }"></div>
-      </div>
-    </section>
+    <span class="skills-title">技能</span>
+    <div class="skills-main">
+      <section class="skills-contents" *ngFor="let item of skills">
+        <div class="title-block">
+          <div class="title">{{ item.name }}</div>
+          <span>{{ item.percent }}%</span>
+        </div>
+        <div class="percent-block">
+          <div class="percent" [ngStyle]="{ 'width': item.percent + '%' }"></div>
+        </div>
+      </section>
+    </div>
   </div>
 </div>
