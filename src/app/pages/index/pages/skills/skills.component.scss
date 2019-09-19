@@ -23,6 +23,18 @@
 
         .title {
           font-size: 20px;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 5px;
+            background-color: #f26b38;
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            opacity: .3;
+          }
         }
       }
 
