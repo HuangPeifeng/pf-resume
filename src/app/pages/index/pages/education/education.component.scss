@@ -1,6 +1,6 @@
 .edu-layout {
   width: 100%;
-  height: calc(100vh - 150px);
+  // height: calc(100vh - 150px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,11 +8,13 @@
   .edu-block {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     width: 1024px;
 
     .edu-main {
-      width: calc(100% / 2 - 20px);
+      width: calc(100% / 3 - 20px);
       padding: 0 10px;
+      margin-bottom: 3em;
 
       .edu-title {
         font-size: 25px;
@@ -32,7 +34,7 @@
       }
 
       .edu-contents {
-        padding: 0 2em 2em;
+        padding: 0 2em 1em;
         position: relative;
 
         &::before {
@@ -46,8 +48,8 @@
         }
 
         .date {
-          color: #f26b38;
-          border: 2px solid #f26b38;
+          color: #ffffff;
+          background-color: #f26b38;
           padding: 0 5px;
           position: relative;
 
