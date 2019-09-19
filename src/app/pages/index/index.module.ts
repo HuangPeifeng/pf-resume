@@ -9,6 +9,7 @@ import { EducationComponent } from './pages/education/education.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { WorksComponent } from './pages/works/works.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { WorksComponent } from './pages/works/works.component';
     EducationComponent,
     ProjectsComponent,
     SkillsComponent,
-    WorksComponent
+    WorksComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
