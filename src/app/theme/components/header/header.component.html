@@ -1,6 +1,13 @@
 <div class="header-layout">
-  <span>關於我</span>
-  <span>技能</span>
-  <span>學經歷</span>
-  <span>專案與作品</span>
+  <div class="hamburger" (click)="toggle()">
+    <div class="top"></div>
+    <div class="mid"></div>
+    <div class="bottom"></div>
+  </div>
+  <div class="menu" [ngClass]="{ isOpen: menuOpen }">
+    <span class="menu-content" *ngFor="let item of menuList; let last = last">
+      <span class="name">{{ item.name }}</span>
+      <div *ngIf="!last" class="divier"></div>
+    </span>
+  </div>
 </div>
