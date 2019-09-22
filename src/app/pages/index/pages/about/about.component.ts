@@ -23,4 +23,8 @@ export class AboutComponent implements OnInit, AfterViewInit {
     });
   }
 
+  goMail() {
+    window.open('peifeng1115@gmail.com');
+  }
+
 }
