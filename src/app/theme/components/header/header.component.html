@@ -6,7 +6,7 @@
   </div>
   <div class="menu" [ngClass]="{ isOpen: menuOpen }">
     <span class="menu-content" *ngFor="let item of menuList; let last = last">
-      <span class="name">{{ item.name }}</span>
+      <div class="name" (click)="goHash(item)">{{ item.name }}</div>
       <div *ngIf="!last" class="divier"></div>
     </span>
   </div>

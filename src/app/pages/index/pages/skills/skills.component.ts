@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent implements OnInit, AfterViewInit {
+  @ViewChild('main', { static: false }) main: ElementRef<any>;
 
   skills = [
     { name: 'Angular 2+', percent: 90 },
@@ -19,9 +21,20 @@ export class SkillsComponent implements OnInit {
     { name: 'MySQL', percent: 50 },
   ];
 
-  constructor() { }
+  constructor(
+
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.route.fragment.subscribe(res => {
+      if (res === 'skills') {
+        this.main.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+      }
+    });
   }
 
 }
