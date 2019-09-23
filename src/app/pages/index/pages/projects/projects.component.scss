@@ -54,6 +54,11 @@
         position: relative;
         transition: .3s ease-in-out;
 
+        @media screen and (max-width: 768px) {
+          width: 230px;
+          height: 230px;
+        }
+
         &:hover {
           .link-layout {
             left: 25px;
