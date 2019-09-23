@@ -14,5 +14,19 @@
     .main-content {
       padding: 0 20px 0 20px;
     }
+
+    .top {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      background-color: #f26b38;
+      opacity: .8;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
