@@ -88,6 +88,15 @@
 
       .info {
         line-height: 5;
+        font-size: 12px;
+
+        @media screen and (max-width: 400px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          line-height: 2;
+        }
 
         .link {
           color: #f26b38 !important;

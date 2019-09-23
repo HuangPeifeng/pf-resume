@@ -7,9 +7,11 @@
       <div class="tw">黃 培 峰</div>
       <div class="en">Huang Pei-Feng</div>
       <div class="info">
-        <span class="bold">前端工程師</span>．
-        <a class="link" href="mailto:peifeng1115@gmail.com" target="_blank">peifeng1115@gmail.com</a>．
-        0970-806-207
+        <span class="bold">前端工程師</span>
+        <span *ngIf="!isPhone">．</span>
+        <a class="link" href="mailto:peifeng1115@gmail.com" target="_blank">peifeng1115@gmail.com</a>
+        <span *ngIf="!isPhone">．</span>
+        <span>0970-806-207</span>
       </div>
     </div>
   </div>

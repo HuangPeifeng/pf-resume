@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,15 +11,22 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   cover = 'assets/images/head.jpg';
 
-  contents = `<div>現任職於高雄哈瑪星科技公司擔任前端開發工程師，在學期間曾於廈門群鑫機械公司實習建立基礎前端技術，目前正使用Angular作為主要框架，與後端人員偕同開發專案，主要負責前端刻版、RWD及操作邏輯撰寫等，目前已有許多上線中平台。</div>
+  contents = `<div>現任職於高雄哈瑪星科技公司擔任前端開發工程師，在學期間曾於廈門群鑫機械公司實習建立基礎前端技術，目前正使用Angular作為主要框架，與後端人員偕同開發專案，主要負責前端刻版、RWD及操作邏輯撰寫等，目前已有許多上線中平台。</div><div>為培養良好的自學能力，在開發上遇到困難時會自行尋求各式資源，增進自己的專業知識，並實務操作提升技術熟練程度，如程式設計與各式Web Template等，藉以從中學習如何獨立解決問題。同時，亦利用業餘時間學習Vue、React、Nodejs等新技術，期許自己的能力更加紮實。</div>`;
 
-  <div>為培養良好的自學能力，在開發上遇到困難時會自行尋求各式資源，增進自己的專業知識，並實務操作提升技術熟練程度，如程式設計與各式Web Template等，藉以從中學習如何獨立解決問題。同時，亦利用業餘時間學習Vue、React、Nodejs等新技術，期許自己的能力更加紮實。</div>`;
+  isPhone = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isPhone = document.body.clientWidth <= 400;
+  }
 
   constructor(
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.onResize();
+  }
 
   ngAfterViewInit() {
     this.route.fragment.subscribe(res => {
