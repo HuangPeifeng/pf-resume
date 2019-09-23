@@ -11,7 +11,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+
   ) { }
 
   ngOnInit() {
@@ -25,6 +26,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
           fragment: null
         });
       }
+    });
+  }
+
+  goNext() {
+    this.router.navigate([], {
+      fragment: 'about'
     });
   }
 
