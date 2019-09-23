@@ -6,11 +6,17 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 1024px) {
+    height: 100%;
+    margin-bottom: 2em;
+  }
+
   .skills-block {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 1024px;
+    max-width: 1024px;
+    width: 100%;
 
     .skills-title {
       font-size: 30px;
@@ -37,6 +43,10 @@
       .skills-contents {
         width: calc(100% / 2 - 30px);
         padding: 15px;
+
+        @media screen and (max-width: 1024px) {
+          width: calc(100% - 30px);
+        }
 
         .title-block {
           display: flex;

@@ -6,14 +6,27 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 900px) {
+    height: 100%;
+    margin-bottom: 2em;
+  }
+
   .about-block {
     display: flex;
     justify-content: flex-end;
-    width: calc(1024px - 5em);
+    max-width: calc(1024px - 5em);
+    width: 100%;
     height: 300px;
     z-index: 1;
     position: relative;
     margin: 0 5em;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 900px) {
+      position: unset;
+      justify-content: center;
+      height: 100%;
+    }
 
     .about-cover {
       position: absolute;
@@ -22,6 +35,11 @@
       width: 306px;
       height: 306px;
       transition: .3s ease-in-out;
+
+      @media screen and (max-width: 900px) {
+        position: unset;
+        margin: 0 10px;
+      }
 
       .cover {
         width: 300px;
@@ -79,7 +97,7 @@
   }
 
   .about-content {
-    width: 1024px;
+    max-width: 1024px;
     padding: 30px;
     line-height: 2;
     border: 5px solid #f26b38;

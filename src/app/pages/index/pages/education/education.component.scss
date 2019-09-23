@@ -6,12 +6,18 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 1024px) {
+    height: 100%;
+    margin-bottom: 2em;
+  }
+
   .edu-block {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 1024px;
+    max-width: 1024px;
+    width: 100%;
 
     .edu-main-title {
       font-size: 30px;
@@ -39,6 +45,14 @@
         width: calc(100% / 3 - 20px);
         padding: 0 10px;
         margin-bottom: 3em;
+
+        @media screen and (max-width: 1024px) {
+          width: calc(100% / 2 - 20px);
+        }
+
+        @media screen and (max-width: 768px) {
+          width: calc(100% - 20px);
+        }
 
         .edu-title {
           font-size: 20px;

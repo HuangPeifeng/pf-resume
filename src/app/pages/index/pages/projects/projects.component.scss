@@ -6,12 +6,17 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 1024px) {
+    height: 100%;
+  }
+
   .projects-block {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 1024px;
+    max-width: 1024px;
+    width: 100%;
 
     .title {
       font-size: 30px;
@@ -35,6 +40,10 @@
       align-items: center;
       justify-content: flex-start;
       flex-wrap: wrap;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
 
       .projects-contents {
         width: 300px;
