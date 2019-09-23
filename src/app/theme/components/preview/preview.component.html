@@ -1,0 +1,5 @@
+<div class="preview-layout" [ngClass]="{ 'show': show }" (click)="close()">
+  <div class="preview-block">
+    <img *ngIf="imgUrl" [src]="imgUrl">
+  </div>
+</div>

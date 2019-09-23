@@ -1,0 +1,32 @@
+.preview-layout {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000cc;
+  top: 100vh;
+  opacity: 0;
+  left: 0;
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease-in-out;
+
+  &.show {
+    top: 0;
+    opacity: 1;
+  }
+
+  .preview-block {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}

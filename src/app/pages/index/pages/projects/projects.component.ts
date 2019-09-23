@@ -18,12 +18,14 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       name: '富邦電子書城',
       coverUrl: 'assets/images/fubon_book_logo.png',
-      url: 'https://fubonebook.hamastar.com.tw'
+      url: 'https://fubonebook.hamastar.com.tw',
+      isPreview: 'assets/images/fubon_ebook.png'
     },
     {
       name: '富邦新視界',
       coverUrl: 'assets/images/fubon_video_logo.png',
-      url: 'https://video.fubonlife.com.tw'
+      url: 'https://video.fubonlife.com.tw',
+      isPreview: 'assets/images/fubon_video.png'
     },
     {
       name: '跨閱互動教育平台',
@@ -67,6 +69,9 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     }
   ];
 
+  showPreview = false;
+  previewUrl = null;
+
   constructor(
     private route: ActivatedRoute
   ) { }
@@ -83,7 +88,19 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   }
 
   openLink(item) {
-    window.open(item.url, '_blank');
+    if (item.isPreview) {
+      this.previewUrl = item.isPreview;
+      this.showPreview = true;
+    } else {
+      window.open(item.url, '_blank');
+    }
+  }
+
+  closePreview($event) {
+    if ($event) {
+      this.showPreview = false;
+      this.previewUrl = null;
+    }
   }
 
 }
