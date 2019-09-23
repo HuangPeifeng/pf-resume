@@ -2,8 +2,8 @@
   <div class="projects-block">
     <span class="title">專案與作品</span>
     <div class="projects-main">
-      <section class="projects-contents" *ngFor="let item of [1,2,3,4,5,6]">
-        <img class="cover" src="assets/images/link1.png">
+      <section class="projects-contents" *ngFor="let item of projectList" [title]="item.name" (click)="openLink(item)">
+        <img class="cover" [src]="item.coverUrl">
         <div class="link-layout">
           <img src="assets/images/link-icon.png">
         </div>
