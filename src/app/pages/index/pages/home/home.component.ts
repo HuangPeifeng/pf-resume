@@ -31,7 +31,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   goNext() {
     this.router.navigate([], {
-      fragment: 'about'
+      fragment: null
+    }).then(() => {
+      this.router.navigate([], {
+        fragment: 'about'
+      });
     });
   }
 

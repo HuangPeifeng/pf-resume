@@ -29,7 +29,11 @@ export class HeaderComponent implements OnInit {
 
   goHash(item) {
     this.router.navigate([], {
-      fragment: item.url
+      fragment: null
+    }).then(() => {
+      this.router.navigate([], {
+        fragment: item.url
+      });
     });
   }
 
