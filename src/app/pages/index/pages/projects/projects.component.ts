@@ -63,7 +63,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       name: 'npm',
       coverUrl: 'assets/images/npm_logo.png',
-      url: 'https://www.npmjs.com/settings/peifeng1115/packages'
+      url: 'https://www.npmjs.com/~peifeng1115'
     }
   ];
 

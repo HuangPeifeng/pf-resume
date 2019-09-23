@@ -15,7 +15,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   isPhone = false;
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
     this.isPhone = document.body.clientWidth <= 400;
   }
