@@ -1,40 +1,48 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewInit
+} from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  selector: "app-skills",
+  templateUrl: "./skills.component.html",
+  styleUrls: ["./skills.component.scss"]
 })
 export class SkillsComponent implements OnInit, AfterViewInit {
-  @ViewChild('main', { static: false }) main: ElementRef<any>;
+  @ViewChild("main", { static: false }) main: ElementRef<any>;
 
   skills = [
-    { name: 'Angular 2+', percent: 90 },
-    { name: 'Typescript', percent: 80 },
-    { name: 'Javascript', percent: 80 },
-    { name: 'Html', percent: 80 },
-    { name: 'CSS & SCSS', percent: 80 },
-    { name: 'JQuery', percent: 70 },
-    { name: 'Git', percent: 70 },
-    { name: 'Express', percent: 50 },
-    { name: 'MySQL', percent: 50 },
+    { name: "Angular 2+", percent: 95 },
+    { name: "Javascript", percent: 90 },
+    { name: "Html", percent: 90 },
+    { name: "CSS & SCSS", percent: 90 },
+    { name: "React", percent: 80 },
+    { name: "Redux", percent: 80 },
+    { name: "Typescript", percent: 80 },
+    { name: "JQuery", percent: 80 },
+    { name: "Git", percent: 80 },
+    { name: "NodeJS", percent: 80 },
+    { name: "MongoDB", percent: 70 },
+    { name: "MySQL", percent: 50 }
   ];
 
-  constructor(
+  constructor(private route: ActivatedRoute) {}
 
-    private route: ActivatedRoute
-  ) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     this.route.fragment.subscribe(res => {
-      if (res === 'skills') {
-        this.main.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+      if (res === "skills") {
+        this.main.nativeElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "start"
+        });
       }
     });
   }
-
 }
