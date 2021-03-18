@@ -46,7 +46,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       name: "BSL俱樂部",
       coverUrl: "assets/images/bsl_logo.png",
-      url: "https://lcy-stage.project.lightup-studio.com"
+      url: "https://be-smart-loser.com"
     },
     {
       name: "理特尚聖誕節促銷網頁",
@@ -77,6 +77,11 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       name: "創科智盈",
       coverUrl: "assets/images/int.svg",
       url: "https://int.lightup-studio.com"
+    },
+    {
+      name: "也趣藝廊",
+      coverUrl: "assets/images/aki-logo.svg",
+      url: "https://aki.project.lightup-studio.com"
     },
     {
       name: "npm",
