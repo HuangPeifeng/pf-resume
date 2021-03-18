@@ -84,6 +84,11 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       url: "https://aki.project.lightup-studio.com"
     },
     {
+      name: "SUNFAR+ DSP",
+      coverUrl: "assets/images/sunfar_en_logo.png",
+      url: "https://dsp-mvp.sunfarplus.com.tw"
+    },
+    {
       name: "npm",
       coverUrl: "assets/images/npm_logo.png",
       url: "https://www.npmjs.com/~peifeng1115"
